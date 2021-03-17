@@ -17,7 +17,7 @@ from flask import Flask,request,jsonify,render_template
 
 
 app=Flask(__name__)
-best_model=pickle.load(open('kmeans+LR_model.pkl','rb'))
+best_model=pickle.load(open('kmeans+SVM_model.pkl','rb'))
 dataset = pickle.load(open('dataset.pkl', 'rb'))
 headers = ["Status", "Duration", "Credit_History", "Purpose", "Credit_amount", "Savings_account",
                "Employment_duration", "Installment_rate", "Personal_status&sex", "Guarantors", "Residence_duration",
