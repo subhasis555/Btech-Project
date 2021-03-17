@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Scoring Form</title>
+</head>
+<body style="background-color: white;">
+    <h1 style="text-align:center;color: crimson;">Credit score prediction</h1>
+    <div style="text-align: center;">
+        <form action="{{url_for('predict')}}" style="background-color: lightgray;margin:0px 350px;padding-left:50px;padding-top:20px;" method="POST">
+            <label for="Status">Status</label>
+            <select id="Status" name="Status" required>
+                <option value="">Select a category</option>
+                <option value="0" selected>A11</option>
+                <option value="1">A12</option>
+                <option value="2">A13</option>
+                <option value="3">A14</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Duration">Duration</label>
+            <input type="number" placeholder="Enter month duration" id="Duration" name="Duration" value="6" required><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="CreditHistory">CreditHistory</label>
+            <select id="CreditHistory" name="CreditHistory" required>
+                <option value="">Select a category</option>
+                <option value="0">A30</option>
+                <option value="1">A31</option>
+                <option value="2">A32</option>
+                <option value="3">A33</option>
+                <option value="4" selected>A34</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Purpose">Purpose</label>
+            <select id="Purpose" name="Purpose" required>
+                <option value="">Select a category</option>
+                <option value="0">A40</option>
+                <option value="1">A41</option>
+                <option value="3">A42</option>
+                <option value="4" selected>A43</option>
+                <option value="5">A44</option>
+                <option value="6">A45</option>
+                <option value="7">A46</option>
+                <option value="7">A47</option>
+                <option value="8">A48</option>
+                <option value="9">A49</option>
+                <option value="2">A410</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="CreditAmount">CreditAmount</label>
+            <input type="number" placeholder="Enter Credit Amount" id="CreditAmount" name="CreditAmount" value="1169"required><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="SavingsAccount">SavingsAccount</label>
+            <select id="SavingsAccount" name="SavingsAccount" required>
+                <option value="">Select a category</option>
+                <option value="0">A61</option>
+                <option value="1">A62</option>
+                <option value="2">A63</option>
+                <option value="3">A64</option>
+                <option value="4" selected>A65</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="EmploymentDuration">Employment Duration</label>
+            <select id="EmploymentDuration" name="EmploymentDuration" required>
+                <option value="">Select a category</option>
+                <option value="0">A71</option>
+                <option value="1">A72</option>
+                <option value="2">A73</option>
+                <option value="3">A74</option>
+                <option value="4" selected>A75</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="InstallmentRate">InstallmentRate</label>
+            <input type="number" placeholder="Enter Installment Rate" id="InstallmentRate" name="InstallmentRate" value="4"required><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Pstatnsex">Personal status & Gender</label>
+            <select id="Pstatnsex" name="Pstatnsex" required>
+                <option value="">Select a category</option>
+                <option value="0">A91</option>
+                <option value="1">A92</option>
+                <option value="2" selected>A93</option>
+                <option value="3">A94</option>
+                <option value="4">A95</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Guarantors">Guarantors</label>
+            <select id="Guarantors" name="Guarantors" required>
+                <option value="">Select a category</option>
+                <option value="0" selected>A101</option>
+                <option value="1">A102</option>
+                <option value="2">A103</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="ResidenceDuration">Residence Duration:</label>
+            <input type="number" placeholder="Enter Residence Duration" id="ResidenceDuration" name="ResidenceDuration" value="4" required><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Property">Property:</label>
+            <select id="Property" name="Property" required>
+                <option value="">Select a category</option>
+                <option value="0" selected>A121</option>
+                <option value="1">A122</option>
+                <option value="2">A123</option>
+                <option value="3">A124</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Age">Age:</label>
+            <input type="number" placeholder="Enter Age" id="Age" name="Age" value="67" required><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="InstallmentPlans">InstallmentPlans:</label>
+            <select id="InstallmentPlans" name="InstallmentPlans" required>
+                <option value="">Select a category</option>
+                <option value="0">A141</option>
+                <option value="1">A142</option>
+                <option value="2" selected>A143</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Housing">Housing:</label>
+            <select id="Housing" name="Housing" required>
+                <option value="">Select a category</option>
+                <option value="0">A151</option>
+                <option value="1" selected>A152</option>
+                <option value="2">A153</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Existing_Credits">Existing Credits:</label>
+            <input type="number" placeholder="Enter Existing_Credits" id="Existing_Credits" name="Existing_Credits" value="2" required><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Job_status">Job status:</label>
+            <select id="Job_status" name="Job_status" required>
+                <option value="">Select a category</option>
+                <option value="0">A171</option>
+                <option value="1">A172</option>
+                <option value="2" selected>A173</option>
+                <option value="3">A174</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="People">No.of People liable to provide maintenence:</label>
+            <input type="number" placeholder="Enter no. of People" id="People" name="People" value="1" required><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="Tele_status">Telephone status:</label>
+            <select id="Tele_status" name="Tele_status" required>
+                <option value="">Select a category</option>
+                <option value="0">A191</option>
+                <option value="1" selected>A192</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <label for="ForeignWorker">Foreign Worker:</label>
+            <select id="ForeignWorker" name="ForeignWorker" required>
+                <option value="">Select a category</option>
+                <option value="0" selected>A201</option>
+                <option value="1">A202</option>
+            </select><span style="color:red;font-weight:bold;font-size:20px;">&#42;</span><br><br>
+            <button type="submit" >Predict</button>
+            <input type="reset">
+        </form>
+    </div>
+    <h2 style="padding-left: 600px;color:blue;">{{prediction_text}}</h2>
+</body>
+</html>
